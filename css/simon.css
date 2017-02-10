@@ -8,15 +8,61 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
+    background-color: #ddd;
 }
 
 #simon {
     height: 100%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 #simon > div {
     float: left;
-    height: 50%;
-    width: 50%;
+    height: calc(50% - 2px);
+    width: calc(50% - 2px);
     background-color: #eee;
+    border-radius: 5%;
+    border: 1px solid #367ebd;
+}
+
+#simon #button1 {
+    border-top-left-radius: 100%;
+    background-color: #003eff;
+}
+
+#simon #button2 {
+    border-top-right-radius: 100%;
+    background-color: #a80114;
+}
+
+#simon #button3 {
+    border-bottom-left-radius: 100%;
+    background-color: #01a819;
+}
+
+#simon #button4 {
+    border-bottom-right-radius: 100%;
+    background-color: #dbf211;
+}
+
+#simon > div.inactive {
+    transition-delay: 0.5s;
+    opacity: 0.5;
+}
+
+#simon > div.active {
+    transition-delay: 0.5s;
+}
+
+@media screen and (orientation:portrait) {
+    #simon {
+        height: 100vw;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    #simon {
+        width: 100vh;
+    }
 }
