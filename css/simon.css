@@ -11,7 +11,7 @@ body {
     background-color: #ddd;
 }
 
-#simon {
+.wrapper, #simon {
     height: 100%;
     width: 100%;
     margin: 0 auto;
@@ -46,23 +46,22 @@ body {
     background-color: #dbf211;
 }
 
+#simon > div.active {
+    transition: opacity 0.2s 0.2s ease;
+    opacity: 1;
+}
+
 #simon > div.inactive {
-    transition-delay: 0.5s;
+    transition: opacity 0.2s 0.2s ease;
     opacity: 0.5;
 }
 
-#simon > div.active {
-    transition-delay: 0.5s;
+#score {
+    position: absolute;
+    float: left;
 }
 
-@media screen and (orientation:portrait) {
-    #simon {
-        height: 100vw;
-    }
-}
-
-@media screen and (orientation:landscape) {
-    #simon {
-        width: 100vh;
-    }
+#simon {
+    height: 100vmin;
+    width: 100vmin;
 }

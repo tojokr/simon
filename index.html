@@ -1,24 +1,31 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>-</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+        <title>-</title>
+        <link rel="manifest" href="manifest.json" />
 
         <link rel="stylesheet" href="css/simon.css" type="text/css" />
 
         <!--
         https://www.html5rocks.com/en/tutorials/webaudio/intro/
+        www.crdp.ac-grenoble.fr/imel/jlj/son_et_lumiere/son/note.htm
+        http://www.universal-soundbank.com/piano.htm
         -->
         <script type="text/javascript" src="js/simon.js"></script>
     </head>
     <body>
-        <div id="simon">
-            <div id="button1">&nbsp;</div>
-            <div id="button2">&nbsp;</div>
-            <div id="button3">&nbsp;</div>
-            <div id="button4">&nbsp;</div>
+        <div class="wrapper">
+            <div id="simon">
+                <div id="button1">&nbsp;</div>
+                <div id="button2">&nbsp;</div>
+                <div id="button3">&nbsp;</div>
+                <div id="button4">&nbsp;</div>
+            </div>
+            <div id="score">0</div>
         </div>
     </body>
 </html>

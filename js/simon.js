@@ -38,6 +38,8 @@ simon = {
 
         this.addNextValue();
 
+        document.getElementById('score').innerHTML = this.values.length - 1;
+
         this.playAllTimer = setInterval(function() {
 
             if (self.currentPosition >= self.values.length) {
@@ -69,7 +71,7 @@ simon = {
             if (element && element.id === this.buttons[this.values[this.currentPosition]].id) {
                 this.currentPosition++;
                 if (this.currentPosition >= this.values.length) {
-                    this.currentSpeedRatio = Math.max(this.currentSpeedRatio - 0.05, this.minSpeedRatio);
+                    this.currentSpeedRatio = Math.max(this.currentSpeedRatio - 1, this.minSpeedRatio);
                     this.showAll();
                 }
                 return; // OK
