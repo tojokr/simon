@@ -15,10 +15,9 @@ simon = {
 
         this.buttons = document.getElementById(this.rootElement).getElementsByTagName('div');
 
-        document.getElementById(this.rootElement).addEventListener('mousedown', function(event) {
-            self.play(event.target);
-        });
-        document.getElementById(this.rootElement).addEventListener('touchstart', function(event) {
+        document.getElementById(this.rootElement).addEventListener('click', function(e) {
+            e.preventDefault();
+
             self.play(event.target);
         });
     },
